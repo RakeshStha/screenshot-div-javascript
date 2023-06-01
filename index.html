@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Screenshot Div using html2canvas</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+    <script
+      src="https://kit.fontawesome.com/184ff209dc.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="divcontents">
+      This is a paragraph that needs to be screenshotted using htm2canvas. You
+      can copy as an Image, preview the paragraph as png, print the paragraph,
+      and download the paragraph div as png.
+    </div>
+
+    <div id="tooltip">Image Copied!</div>
+    <div class="btn-group">
+      <button class="button" onclick="imgDownload('copy')">
+        <div class="tooltip">
+          <i class="fas fa-copy"></i>
+          <span class="tooltip-text">Copy Image</span>
+        </div>
+      </button>
+      <a
+        class="button"
+        onclick="imgDownload('download')"
+        id="download"
+        href="#"
+      >
+        <div class="tooltip">
+          <i class="fa-solid fa-download"></i>
+          <span class="tooltip-text">Download Image</span>
+        </div>
+      </a>
+      <button class="button" onclick="imgDownload('preview')">
+        <div class="tooltip">
+          <i class="fa-solid fa-eye"></i>
+          <span class="tooltip-text">Preview Image</span>
+        </div>
+      </button>
+      <button class="button" onclick="imgDownload('print')">
+        <div class="tooltip">
+          <i class="fa-solid fa-print"></i>
+          <span class="tooltip-text">Print Image</span>
+        </div>
+      </button>
+    </div>
+
+    <div id="view" class="previewArea">Preview Here</div>
+    <script src="./script.js"></script>
+  </body>
+</html>
